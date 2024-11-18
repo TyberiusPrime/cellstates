@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools >= 61.0",	"wheel", "cython>1.0", "numpy<2", 'scipy']
+build-backend = "setuptools.build_meta"
+
+[project]
+name = 'cellstates'
+version = '0.1'
+description = 'Module for finding gene expression states in scRNAseq data'
+authors = [{name='Pascal Grobecker', email = 'pascal.grobecker@unibas.ch'}]
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = [
+	"numpy<2",
+	"scipy",
+	"pandas>2",
+	"matplotlib>0",
+	"ete3>0",
+]
+requires-python =">3.9"
+
+
+[project.scripts]
+cellstates = "cellstates:cli_cellstates.main"
+cellstates_add_dataset = "cellstates:cli_add_dataset.main"
+
+[project.urls]
+Homepage = "https://github.com/nimwegenLab/cellstates/"
+
